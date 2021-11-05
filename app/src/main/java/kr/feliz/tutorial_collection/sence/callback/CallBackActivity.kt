@@ -3,6 +3,7 @@ package kr.feliz.tutorial_collection.sence.callback
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import kr.feliz.tutorial_collection.databinding.ActivityCallbackBinding
 
@@ -20,6 +21,7 @@ class CallBackActivity : AppCompatActivity() {
 
         someCallBackMethod ( completion = {
             Log.d(TAG, "CallBackActivity - $it")
+            Toast.makeText(this, "3second callback finished", Toast.LENGTH_SHORT).show()
         } )
 
         Log.d(TAG, "CallBackActivity - onCreate() called")

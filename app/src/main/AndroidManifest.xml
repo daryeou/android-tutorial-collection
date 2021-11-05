@@ -27,6 +27,18 @@
         </activity>
 
         <activity
+            android:name="kr.feliz.tutorial_collection.sence.singleton.SingletonActivity">
+        </activity>
+
+        <activity
+            android:name="kr.feliz.tutorial_collection.sence.bottomnavigation.BottomNavigationActivity">
+        </activity>
+
+        <activity
+            android:name="kr.feliz.tutorial_collection.sence.scrollview.ScrollViewActivity">
+        </activity>
+
+        <activity
             android:name="kr.feliz.tutorial_collection.sence.customdialog.DialogActivity">
         </activity>
 

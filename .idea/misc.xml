@@ -13,15 +13,23 @@
         <entry key="app/src/main/res/drawable/rounded_corner_white_transparent.xml" value="0.28425925925925927" />
         <entry key="app/src/main/res/drawable/rounded_stroke_blue.xml" value="0.28425925925925927" />
         <entry key="app/src/main/res/layout/activity_admob.xml" value="0.15552178318135765" />
+        <entry key="app/src/main/res/layout/activity_bottom_navigation.xml" value="0.20466058763931105" />
         <entry key="app/src/main/res/layout/activity_callback.xml" value="0.12563323201621074" />
         <entry key="app/src/main/res/layout/activity_dialog.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.15552178318135765" />
         <entry key="app/src/main/res/layout/activity_lottie.xml" value="0.1778115501519757" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_scrollview.xml" value="0.1833839918946302" />
         <entry key="app/src/main/res/layout/activity_second.xml" value="0.15552178318135765" />
+        <entry key="app/src/main/res/layout/activity_shake.xml" value="0.1833839918946302" />
+        <entry key="app/src/main/res/layout/activity_singleton.xml" value="0.15526849037487336" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.20466058763931105" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.20466058763931105" />
+        <entry key="app/src/main/res/layout/fragment_ranking.xml" value="0.20466058763931105" />
         <entry key="app/src/main/res/layout/layout_dialog.xml" value="0.22" />
         <entry key="app/src/main/res/layout/layout_recycler_item.xml" value="0.15552178318135765" />
         <entry key="app/src/main/res/layout/layout_tutorial_item.xml" value="0.1887031408308004" />
+        <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.2324074074074074" />
       </map>
     </option>
   </component>
