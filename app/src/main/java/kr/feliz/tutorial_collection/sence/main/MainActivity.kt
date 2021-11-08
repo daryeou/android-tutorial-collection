@@ -8,13 +8,14 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import kr.feliz.tutorial_collection.databinding.ActivityMainBinding
-import kr.feliz.tutorial_collection.sence.main.data.ClassData
 import kr.feliz.tutorial_collection.sence.main.data.MyModel
+import kr.feliz.tutorial_collection.utils.ClassData
 
 class MainActivity: AppCompatActivity(), MyRecyclerViewInterface {
-
-    val TAG: String = "MainActivity"
-    var modelList = ArrayList<MyModel>()
+    companion object{
+        const val TAG: String = "MainActivity"
+    }
+    private var modelList = ArrayList<MyModel>()
     private lateinit var myRecyclerAdapter: MyRecyclerAdapter
 
     var mBinding: ActivityMainBinding? = null
@@ -27,7 +28,7 @@ class MainActivity: AppCompatActivity(), MyRecyclerViewInterface {
 
         Log.d(TAG, "MainActivity - onCreate() called")
         for (clazz in ClassData.values()){
-            var myModel = MyModel(name = clazz.name, profileImage = "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E", clazz.clazz)
+            val myModel = MyModel(name = clazz.name, profileImage = "https://t1.daumcdn.net/cfile/tistory/24283C3858F778CA2E", clazz.clazz)
             this.modelList.add(myModel)
         }
 
@@ -44,16 +45,14 @@ class MainActivity: AppCompatActivity(), MyRecyclerViewInterface {
         Log.d(TAG, "MainActivity - onItemClicked() called")
         Toast.makeText(this, "클릭 이벤트", Toast.LENGTH_SHORT).show()
 
-        var name: String? = null
-
         AlertDialog.Builder(this).setTitle(title).setMessage("test message")
             .setPositiveButton("Yes"){dialog, id ->
                 Log.d(TAG, "MainActivity - onItemClicked() called")
             }.show()
 
         Log.d(TAG, "MainActivity - onItemClicked() called - 포지션 번호 $position")
-        var intent = Intent(this, this.modelList[position].clazz)
-        var className: String = intent!!.component!!.className
+        val intent = Intent(this, this.modelList[position].clazz)
+        val className: String = intent.component!!.className
         Toast.makeText(this, className, Toast.LENGTH_SHORT).show()
         startActivity(intent)
     }

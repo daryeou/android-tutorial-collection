@@ -12,7 +12,9 @@ class BottomNavigationActivity: BaseActivity() {
     private lateinit var rankingFragment: RankingFragment
     private lateinit var profileFragment: ProfileFragment
 
-    override val TAG: String = "BottomNavActivity"
+    companion object{
+        val TAG: String = "BottomNavActivity"
+    }
 
     private var mBinding : ActivityBottomNavigationBinding? = null
     val binding get() = mBinding!!

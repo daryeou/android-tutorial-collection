@@ -22,6 +22,7 @@ class CallBackActivity : AppCompatActivity() {
         someCallBackMethod ( completion = {
             Log.d(TAG, "CallBackActivity - $it")
             Toast.makeText(this, "3second callback finished", Toast.LENGTH_SHORT).show()
+            finish()
         } )
 
         Log.d(TAG, "CallBackActivity - onCreate() called")

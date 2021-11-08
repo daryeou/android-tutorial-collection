@@ -31,6 +31,10 @@
         </activity>
 
         <activity
+            android:name="kr.feliz.tutorial_collection.sence.viewpager.ViewPagerActivity">
+        </activity>
+
+        <activity
             android:name="kr.feliz.tutorial_collection.sence.bottomnavigation.BottomNavigationActivity">
         </activity>
 

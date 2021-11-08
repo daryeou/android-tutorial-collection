@@ -166,6 +166,11 @@ dependencies {
     implementation("androidx.fragment:fragment-ktx:1.3.1")
     implementation("com.github.bumptech.glide:glide:4.12.0")
     implementation("com.google.android.gms:play-services-ads:20.4.0")
+    // 뷰페이저 및 인디케이
+    implementation("androidx.viewpager2:viewpager2:1.0.0")
+    implementation("com.tbuonomo:dotsindicator:4.2")
+    // 메테리얼
+    implementation("com.google.android.material:material:1.5.0-alpha05")
     annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
     testImplementation("junit:junit:4.+")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")

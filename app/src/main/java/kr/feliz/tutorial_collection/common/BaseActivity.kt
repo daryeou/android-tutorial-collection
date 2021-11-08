@@ -7,7 +7,7 @@ import androidx.fragment.app.commitNow
 
 abstract class BaseActivity: AppCompatActivity() {
 
-   abstract val TAG: String
+    val TAG: String = "BaseActivity"
 
     fun changeFragment(frameLayoutId: Int, fragment: Fragment) {
         supportFragmentManager.commitNow(true) {
@@ -19,7 +19,7 @@ abstract class BaseActivity: AppCompatActivity() {
             if (currentFragment == null) {
                 targetFragment = fragment
                 add(frameLayoutId,fragment) // add,replace,remove
-                Log.d(TAG, "BottomNavigationActivity - New fragment added")
+                Log.d(TAG, " - New fragment added")
             }else{
                 hide(currentFragment)
                 if (fragment in supportFragmentManager.fragments) {
@@ -28,7 +28,7 @@ abstract class BaseActivity: AppCompatActivity() {
                     add(frameLayoutId,fragment)// show/hide(UI숨기거나 보이기), attach/detach(UI계층에서 분리/결합)
                 }
             }
-            Log.d(TAG, "BottomNavigationActivity - reload fragment")
+            Log.d(TAG, " - reload fragment")
 
             // addToBackStack(null) // 백스택에 기록
             // setCustomAnimations(enter2, exit2, popEnter2, popExit2)
