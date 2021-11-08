@@ -67,8 +67,7 @@
             app:helperText="검색어를 입력해주세요."
             app:counterEnabled="true"
             app:counterMaxLength="12"
-            app:boxStrokeColor="@color/blue"
-            >
+            app:boxStrokeColor="@color/blue">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/searchTermEditTextView"
                 android:layout_width="match_parent"
