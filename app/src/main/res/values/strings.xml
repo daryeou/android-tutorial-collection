@@ -3,4 +3,7 @@
     <string name="xText">X: %1$f</string>
     <string name="yText">Y: %1$f</string>
     <string name="zText">Z: %1$f</string>
+    <string name="appwidget_text">KorbitWidget</string>
+    <string name="add_widget">KorbitDashboard</string>
+    <string name="app_widget_description">KorbitDashboard</string>
 </resources>

@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="kr.feliz.tutorial_collection">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".app.App"
@@ -12,63 +12,42 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <receiver
+            android:name=".KorbitDashboardWidget"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/korbit_dashboard_widget_info" />
+        </receiver>
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+            android:value="ca-app-pub-3940256099942544~3347511713" />
 
         <activity
-            android:name="kr.feliz.tutorial_collection.sence.main.MainActivity"
+            android:name=".sence.main.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name="kr.feliz.tutorial_collection.sence.singleton.SingletonActivity">
-        </activity>
-
-        <activity
-            android:name="kr.feliz.tutorial_collection.sence.viewpager.ViewPagerActivity">
-        </activity>
-
-        <activity
-            android:name="kr.feliz.tutorial_collection.sence.bottomnavigation.BottomNavigationActivity">
-        </activity>
-
-        <activity
-            android:name="kr.feliz.tutorial_collection.sence.scrollview.ScrollViewActivity">
-        </activity>
-
-        <activity
-            android:name="kr.feliz.tutorial_collection.sence.customdialog.DialogActivity">
-        </activity>
-
-        <activity
-            android:name="kr.feliz.tutorial_collection.sence.layoutpractice.LayoutPracticeActivity">
-        </activity>
-
-        <activity
-            android:name="kr.feliz.tutorial_collection.sence.admob.AdmobActivity">
-        </activity>
-
-        <activity
-            android:name="kr.feliz.tutorial_collection.sence.layoutpractice.SecondActivity">
-        </activity>
-
-        <activity
-            android:name="kr.feliz.tutorial_collection.sence.shakeanimation.ShakeActivity">
-        </activity>
-
-        <activity
-            android:name="kr.feliz.tutorial_collection.sence.callback.CallBackActivity">
-        </activity>
-
-        <activity
-            android:name="kr.feliz.tutorial_collection.sence.lottieanimation.LottieActivity">
-        </activity>
+        <activity android:name=".sence.singleton.SingletonActivity"></activity>
+        <activity android:name=".sence.viewpager.ViewPagerActivity"></activity>
+        <activity android:name=".sence.bottomnavigation.BottomNavigationActivity"></activity>
+        <activity android:name=".sence.scrollview.ScrollViewActivity"></activity>
+        <activity android:name=".sence.customdialog.DialogActivity"></activity>
+        <activity android:name=".sence.layoutpractice.LayoutPracticeActivity"></activity>
+        <activity android:name=".sence.admob.AdmobActivity"></activity>
+        <activity android:name=".sence.layoutpractice.SecondActivity"></activity>
+        <activity android:name=".sence.shakeanimation.ShakeActivity"></activity>
+        <activity android:name=".sence.callback.CallBackActivity"></activity>
+        <activity android:name=".sence.lottieanimation.LottieActivity"></activity>
     </application>
 
 </manifest>
