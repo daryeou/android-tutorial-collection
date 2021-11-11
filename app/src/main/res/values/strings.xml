@@ -3,7 +3,8 @@
     <string name="xText">X: %1$f</string>
     <string name="yText">Y: %1$f</string>
     <string name="zText">Z: %1$f</string>
-    <string name="appwidget_text">KorbitWidget</string>
-    <string name="add_widget">KorbitDashboard</string>
-    <string name="app_widget_description">KorbitDashboard</string>
+
+    <string name="korbit_appwidget_text">업데이트 가능 시간: 1m,5m,10m,30m,1h,4h,1d</string>
+    <string name="korbit_app_widget">KorbitDashboard</string>
+    <string name="korbit_app_widget_description">KorbitDashboard</string>
 </resources>

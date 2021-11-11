@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg_login"
     android:paddingHorizontal="20dp"
-    tools:context=".sence.main.MainActivity">
+    tools:context=".sence.home.MainActivity">
 
     <TextView
         android:layout_width="match_parent"

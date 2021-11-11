@@ -13,11 +13,11 @@ android {
     compileSdkVersion(compileSdkVersion)
 
     defaultConfig {
-        applicationId = "kr.feliz.tutorial_collection"
-        minSdkVersion(23)
-        targetSdkVersion(31)
-        versionCode = 1
-        versionName = "1.0"
+        applicationId = Versions.APPLICATION_ID
+        minSdkVersion(Versions.MIN_ANDROID_SDK)
+        targetSdkVersion(Versions.TARGET_ANDROID_SDK)
+        versionCode = Versions.VERSION_CODE
+        versionName = Versions.VERSION_NAME
         setProperty("archivesBaseName","${getDateTime()}-$applicationId-$versionName-$versionCode")
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -75,7 +75,7 @@ android {
             versionNameSuffix = "-DEV" // 어플리케이션 이름의 접미사
             versionCode = 1
             versionName = "1.0.0"
-            // buildConfigField("String", "FIREBASE_VERSION_CHECK", BuildConfig.DEV_OPS.FIREBASE_VERSION_CHECK)
+            buildConfigField("String", "CHART_API_SERVER_BASE_URL", BuildConfig.KORBIT.PROD.CHART_API_SERVER_BASE_URL)
             // resValue("string", "build_env", BuildConfig.PROD.APP_NAME)
         }
 
@@ -151,8 +151,8 @@ val rxjavaVersion = "2.4.0"
 dependencies {
     //implementation(project(":libs"))
     //implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
-    implementation("androidx.core:core-ktx:1.7.0")
-    implementation("androidx.appcompat:appcompat:1.3.1")
+    appCompat()
+    koin()
     implementation("com.google.android.material:material:1.4.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.1")
     implementation("com.github.gayanvoice:android-animations-kotlin:1.0.1")
@@ -171,6 +171,10 @@ dependencies {
     implementation("com.tbuonomo:dotsindicator:4.2")
     // 메테리얼
     implementation("com.google.android.material:material:1.5.0-alpha05")
+    // 차트
+    implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
+    // 레트로핏
+    retrofit()
     annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
     testImplementation("junit:junit:4.+")
     androidTestImplementation("androidx.test.ext:junit:1.1.3")

@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <receiver
-            android:name=".KorbitDashboardWidget"
+            android:name=".korbit.widget.KorbitDashboardWidget"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -29,7 +29,7 @@
             android:value="ca-app-pub-3940256099942544~3347511713" />
 
         <activity
-            android:name=".sence.main.MainActivity"
+            android:name=".sence.home.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -48,6 +48,7 @@
         <activity android:name=".sence.shakeanimation.ShakeActivity"></activity>
         <activity android:name=".sence.callback.CallBackActivity"></activity>
         <activity android:name=".sence.lottieanimation.LottieActivity"></activity>
+        <activity android:name=".sence.koin.KoinActivity"></activity>
     </application>
 
 </manifest>
