@@ -1,18 +1,14 @@
 # android-tutorial-collection
 
-Kotlin 기반의 안드로이드 앱을 연습하기 위해 만든 예시 앱입니다.</br>
-Activity와 Layout간 ViewBinding이 적용되었습니다.</br>
-디자인 패턴은 적용하지 않았습니다.</br>
-
 ### Language
 - Kotlin
 
 ## Introduce
-<div align=center>
-군대 복무 시절 연습용으로 만들었던 안드로이드 용 다마꼬치 위젯입니다.<br/><br/>
-  
-Code-Convention 이나 DI, 디자인패턴 등이 적용되지 않은 모델로 참고만 하는 것을 권장합니다.<br/>
-</div>
+
+Kotlin 기반의 안드로이드 앱을 연습하기 위해 만든 예시 앱입니다.</br>
+Activity와 Layout간 ViewBinding이 적용되었습니다.</br>
+디자인 패턴은 적용하지 않았습니다.</br>
+
 
 ## Snapshots
 
