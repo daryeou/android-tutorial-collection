@@ -9,6 +9,7 @@ class MySQLOpenHelperSingleton private constructor(context: Context): SQLiteOpen
 
     companion object {
         // 자기 자신 변수 선언
+        // Volatile은 Main Memory상에 항상 읽기, 쓰기를 함을 의미(멀티스레드 환경 용이)
         @Volatile private var instance: MySQLOpenHelperSingleton? = null
 
         // 자기 자신 가져오기

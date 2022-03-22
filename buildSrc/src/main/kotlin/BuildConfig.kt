@@ -1,7 +1,7 @@
 object BuildConfig {
-    object KORBIT{
+    object LEMONFOX{
         object PROD : Field() {
-            override val CHART_API_SERVER_BASE_URL = "\"https://d1cta0eou52ius.cloudfront.net/\""
+            override val CHART_API_SERVER_BASE_URL = "\"https://chart.lemonfox.net/\""
         }
         abstract class Field {
             abstract val CHART_API_SERVER_BASE_URL: String

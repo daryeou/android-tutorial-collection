@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:description="@string/lemonfox_app_widget_description"
+    android:initialKeyguardLayout="@layout/widget_lemonfox_dashboard"
+    android:initialLayout="@layout/widget_lemonfox_dashboard"
+    android:minWidth="110dp"
+    android:minHeight="110dp"
+    android:maxWidth="370dp"
+    android:maxHeight="370dp"
+    android:previewImage="@drawable/image_chart"
+    android:previewLayout="@layout/widget_lemonfox_dashboard"
+    android:resizeMode="horizontal|vertical"
+    android:updatePeriodMillis="86400000"
+    android:widgetCategory="home_screen" />

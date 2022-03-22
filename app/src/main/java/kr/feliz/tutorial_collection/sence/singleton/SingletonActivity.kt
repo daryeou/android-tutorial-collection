@@ -19,8 +19,7 @@ class SingletonActivity: AppCompatActivity() {
 
         val mySQLOpenHelper1 = MySQLOpenHelperSingleton.getInstance(this)
         val mySQLOpenHelper2 = MySQLOpenHelperSingleton.getInstance(this)
-        Log.d(TAG, "SingletonActivity - $mySQLOpenHelper1")
-        Log.d(TAG, "SingletonActivity - $mySQLOpenHelper2")
-        Toast.makeText(this, "1 - $mySQLOpenHelper1 2- $mySQLOpenHelper2", Toast.LENGTH_SHORT).show()
+        Toast.makeText(this, "1: $mySQLOpenHelper1 2: $mySQLOpenHelper2", Toast.LENGTH_SHORT).show()
+        binding.sqlResultTextView.text = "1: $mySQLOpenHelper1 2: $mySQLOpenHelper2"
     }
 }

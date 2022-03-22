@@ -10,12 +10,12 @@ plugins {
 android {
     // compileSdkVersion(rootProject.extra["compileSdkVersion"])
     val compileSdkVersion: Int by rootProject.extra
-    compileSdkVersion(compileSdkVersion)
+    compileSdk = compileSdkVersion
 
     defaultConfig {
         applicationId = Versions.APPLICATION_ID
-        minSdkVersion(Versions.MIN_ANDROID_SDK)
-        targetSdkVersion(Versions.TARGET_ANDROID_SDK)
+        minSdk = Versions.MIN_ANDROID_SDK
+        targetSdk = Versions.TARGET_ANDROID_SDK
         versionCode = Versions.VERSION_CODE
         versionName = Versions.VERSION_NAME
         setProperty("archivesBaseName","${getDateTime()}-$applicationId-$versionName-$versionCode")
@@ -67,7 +67,7 @@ android {
         }
     }
 
-    flavorDimensions("api", "mode")
+    flavorDimensions.addAll(mutableListOf("api", "mode"))
     productFlavors {
         create("dev") {
             dimension = "mode"
@@ -75,7 +75,7 @@ android {
             versionNameSuffix = "-DEV" // 어플리케이션 이름의 접미사
             versionCode = 1
             versionName = "1.0.0"
-            buildConfigField("String", "CHART_API_SERVER_BASE_URL", BuildConfig.KORBIT.PROD.CHART_API_SERVER_BASE_URL)
+            buildConfigField("String", "CHART_API_SERVER_BASE_URL", BuildConfig.LEMONFOX.PROD.CHART_API_SERVER_BASE_URL)
             // resValue("string", "build_env", BuildConfig.PROD.APP_NAME)
         }
 
@@ -165,6 +165,15 @@ dependencies {
     implementation("io.reactivex.rxjava2:rxkotlin:$rxjavaVersion")
     implementation("androidx.fragment:fragment-ktx:1.3.1")
     implementation("com.github.bumptech.glide:glide:4.12.0")
+    implementation("com.google.android.gms:play-services-ads:20.4.0")
+    constraints{
+        implementation("androidx.work:work-runtime:2.7.0") {
+            because("""androidx.work:work-runtime:2.1.0 pulled from
+                          play-services-ads has a bug using PendingIntent without
+                          FLAG_IMMUTABLE or FLAG_MUTABLE and will fail in Apps
+                          targeting S+.""")
+        }
+    }
     implementation("com.google.android.gms:play-services-ads:20.4.0")
     // 뷰페이저 및 인디케이
     implementation("androidx.viewpager2:viewpager2:1.0.0")

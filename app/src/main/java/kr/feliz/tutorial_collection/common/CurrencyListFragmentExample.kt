@@ -9,12 +9,12 @@ package kr.feliz.tutorial_collection.common
 //import androidx.lifecycle.Observer
 //import androidx.recyclerview.widget.DividerItemDecoration
 //import com.google.android.material.snackbar.Snackbar
-//import com.korbit.exchange.R
-//import com.korbit.exchange.common.BaseFragment
-//import com.korbit.exchange.databinding.FragmentHomeCurrencySimpleListBinding
-//import com.korbit.exchange.scene.market.adapter.CurrencyListAdapter
-//import com.korbit.exchange.scene.market.item.CurrencyListItem
-//import com.korbit.exchange.scene.market.viewmodel.CurrencyListViewModel
+//import com.lemonfox.exchange.R
+//import com.lemonfox.exchange.common.BaseFragment
+//import com.lemonfox.exchange.databinding.FragmentHomeCurrencySimpleListBinding
+//import com.lemonfox.exchange.scene.market.adapter.CurrencyListAdapter
+//import com.lemonfox.exchange.scene.market.item.CurrencyListItem
+//import com.lemonfox.exchange.scene.market.viewmodel.CurrencyListViewModel
 //
 //
 //class CurrencyListFragmentExample: BaseFragment<FragmentHomeCurrencySimpleListBinding>() {

@@ -4,7 +4,7 @@
     <string name="yText">Y: %1$f</string>
     <string name="zText">Z: %1$f</string>
 
-    <string name="korbit_appwidget_text">업데이트 가능 시간: 1m,5m,10m,30m,1h,4h,1d</string>
-    <string name="korbit_app_widget">KorbitDashboard</string>
-    <string name="korbit_app_widget_description">KorbitDashboard</string>
+    <string name="lemonfox_appwidget_text">Test Module</string>
+    <string name="lemonfox_app_widget">LemonfoxDashboard</string>
+    <string name="lemonfox_app_widget_description">LemonfoxDashboard</string>
 </resources>

@@ -44,17 +44,13 @@ class MainActivity: AppCompatActivity(), MyRecyclerViewInterface {
 
     override fun onItemClicked(position: Int) {
         Log.d(TAG, "MainActivity - onItemClicked() called")
-        Toast.makeText(this, "클릭 이벤트", Toast.LENGTH_SHORT).show()
-
-        AlertDialog.Builder(this).setTitle(title).setMessage("test message")
-            .setPositiveButton("Yes"){dialog, id ->
-                Log.d(TAG, "MainActivity - onItemClicked() called")
-            }.show()
-
-        Log.d(TAG, "MainActivity - onItemClicked() called - 포지션 번호 $position")
         val intent = Intent(this, this.modelList[position].clazz)
         val className: String = intent.component!!.className
         Toast.makeText(this, className, Toast.LENGTH_SHORT).show()
+        AlertDialog.Builder(this).setTitle(title).setMessage("onItemClicked() called - 포지션 번호 $position\nClassName: ${className}")
+            .setPositiveButton("Yes"){dialog, id ->
+                Log.d(TAG, "MainActivity - onItemClicked() called")
+            }.show()
         startActivity(intent)
     }
 

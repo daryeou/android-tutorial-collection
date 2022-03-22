@@ -13,7 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <receiver
-            android:name=".korbit.widget.KorbitDashboardWidget"
+            android:name=".lemonfox.widget.LemonfoxDashboardWidget"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
@@ -21,7 +21,7 @@
 
             <meta-data
                 android:name="android.appwidget.provider"
-                android:resource="@xml/korbit_dashboard_widget_info" />
+                android:resource="@xml/lemonfox_dashboard_widget_info" />
         </receiver>
 
         <meta-data
